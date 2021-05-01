@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mkdir ~/research 2> /dev/null/
+echo "A Qick system adufit script" > ~/research/sys_info.txt
+adte >> ~/research/sys_info.txt  
+echo -e "\n777 files:" >> ~/research/sys_info.txt 
+find / -type f -perm 777 >> ~/research/sys_info.txt 
+echo -e "\ntop 10 processes:" >>  ~/research/sys_info.txt 
+ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head >> ~/research/sys_info.txt 
+
+
